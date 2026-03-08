@@ -1,0 +1,15 @@
+### Get all contacts
+GET http://localhost:3000/contacts
+
+###
+
+### Get contact by ID
+# Replace the ID below with an actual ID from your database
+GET http://localhost:3000/contacts/65f9ab5106c2aa31f943e1a2
+
+###
+
+### Get professional (demo endpoint - if uncommented)
+GET http://localhost:3000/professional
+
+###

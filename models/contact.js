@@ -13,7 +13,27 @@ const getContactById = async (id) => {
   return contacts[0];
 };
 
+const createContact = async (contact) => {
+  return await mongodb.getDatabase().collection('contacts').insertOne(contact);
+};
+
+const updateContact = async (id, contact) => {
+  const contactId = new ObjectId(id);
+  return await mongodb.getDatabase().collection('contacts').replaceOne(
+    { _id: contactId },
+    contact
+  );
+};
+
+const deleteContact = async (id) => {
+  const contactId = new ObjectId(id);
+  return await mongodb.getDatabase().collection('contacts').deleteOne({ _id: contactId });
+};
+
 module.exports = {
   getAllContacts,
-  getContactById
+  getContactById,
+  createContact,
+  updateContact,
+  deleteContact
 };

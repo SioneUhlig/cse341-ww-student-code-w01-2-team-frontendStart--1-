@@ -7,6 +7,7 @@ const sampleContacts = [
     lastName: "Uhlig",
     username: "Usione",
     favoriteColor: "blue",
+    birthDay: "April 17, 1993", 
     
   },
   {
@@ -14,6 +15,7 @@ const sampleContacts = [
     lastName: "Walz",
     email: "Jwalz",
     favoriteColor: "green",
+    birthDay: "September 2, 2001",
     
   },
   {
@@ -21,6 +23,7 @@ const sampleContacts = [
     lastName: "Miller",
     email: "Mbob",
     favoriteColor: "red",
+    birthDay: "January 29, 1987",
   }
 ];
 

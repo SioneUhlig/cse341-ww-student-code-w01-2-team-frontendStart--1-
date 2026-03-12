@@ -5,11 +5,10 @@
     "description": "Contacts Api",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "sione-uhlig-cse341.onrender.com",
   "basePath": "/",
   "schemes": [
-    "https",
-    "http"
+    "https"
   ],
   "paths": {
     "/professional": {
@@ -59,6 +58,9 @@
                 },
                 "favoriteColor": {
                   "example": "any"
+                },
+                "birthDay": {
+                  "example": "any"
                 }
               }
             }
@@ -98,26 +100,38 @@
           }
         }
       },
-      "put": {
-        "tags": [],
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
+     "put": {
+  "tags": [],
+  "description": "",
+  "parameters": [
+    {
+      "name": "id",
+      "in": "path",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "body",
+      "in": "body",
+      "required": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "firstName": { "example": "any" },
+          "lastName": { "example": "any" },
+          "username": { "example": "any" },
+          "email": { "example": "any" },
+          "favoriteColor": { "example": "any" },
+          "birthDay": { "example": "any" }
         }
-      },
+      }
+    }
+  ],
+  "responses": {
+    "204": { "description": "No Content" },
+    "500": { "description": "Internal Server Error" }
+  }
+},
       "delete": {
         "tags": [],
         "description": "",

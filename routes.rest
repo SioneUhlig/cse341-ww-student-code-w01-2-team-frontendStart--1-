@@ -18,7 +18,7 @@ Content-Type: application/json
   "username": "jdoe",
   "email": "johndoe@email.com",
   "favoriteColor": "blue",
-  "DOB": "April 17, 1993"
+  "birthDay": "April 17, 1993"
 }
 
 ###

@@ -21,7 +21,8 @@ const createContact = async (req, res) => {
     lastName: req.body.lastName,
     username: req.body.username,
     email: req.body.email,
-    favoriteColor: req.body.favoriteColor
+    favoriteColor: req.body.favoriteColor,
+    birthDay: req.body.birthDay
   };
   const result = await Contact.createContact(contact);
   if (result.insertedId) {
@@ -38,7 +39,8 @@ const updateContact = async (req, res) => {
     lastName: req.body.lastName,
     username: req.body.username,
     email: req.body.email,
-    favoriteColor: req.body.favoriteColor
+    favoriteColor: req.body.favoriteColor,
+    birthDay: req.body.birthDay
   };
   const result = await Contact.updateContact(req.params.id, contact);
   if (result.matchedCount > 0) {
